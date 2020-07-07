@@ -1,7 +1,27 @@
 package com.live.java7.oops.wrapper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PolymorphismUsingWrappers {
 	public static void main(String[] args) {
+		// primitiveTypes();
+		primitiveTypesInCollections();
+	}
+
+	private static void primitiveTypesInCollections() {
+		int i = 100;
+		float f = 500.50f;
+
+		List list = new ArrayList();
+		list.add(i);
+		list.add(f);
+		list.add(new TestClass());
+		System.out.println(list);
+
+	}
+
+	private static void primitiveTypes() {
 		int i = 100;
 		float f = 500.50f;
 
