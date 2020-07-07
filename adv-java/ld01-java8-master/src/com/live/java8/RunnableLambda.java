@@ -13,10 +13,10 @@ public class RunnableLambda {
 // Every program in java starts with a single thread - main thread
 	public static void main(String[] args) {
 //		usingThreadClass();
-//      usingRunnable();
+//		usingRunnable();
 //		usingAnonymousClass();
 //		usingRunnableWithLambda();
-		usingLambdaConcise();
+//		usingLambdaConcise();
 	}
 
 	private static void usingAnonymousClass() {
@@ -40,10 +40,13 @@ public class RunnableLambda {
 	}
 
 	private static void usingRunnableWithLambda() {
+		// The runnable interface is a functional interface
+		// because it has only one abstract method
+		// Runnable is the type of lambda expression
 		Runnable runnableLambda = () -> System.out.println("anonymous class used here with lambda epxression!");
 		Thread thread = new Thread(runnableLambda);
 		thread.start();
-		
+
 //		var myvar = function myFunction() {
 //			alert("Hello");
 //			}
@@ -57,12 +60,20 @@ public class RunnableLambda {
 		System.out.println(Thread.currentThread().getId());
 		TestThread testThread = new TestThread();
 		testThread.start();
+		// deprecated methods - recommended not to use it.
+		// testThread.stop();
 	}
 }
 
 class TestThread extends Thread {
 	@Override
 	public void run() {
+		try {
+			// makes the thread sleep for a predefined interval of time.
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			System.out.println(e);
+		}
 		Thread.currentThread().setName("Child Thread Renamed");
 		System.out.println(Thread.currentThread().getId());
 		System.out.println("Child Thread : TestThread run()");
@@ -71,7 +82,12 @@ class TestThread extends Thread {
 }
 
 class TestThreadRunnable extends Dummy implements Runnable {
-	@Override
+//	@Override
+//	public void run1() {
+//		System.out.println("Implementing runnable.....");
+//
+//	}
+
 	public void run() {
 		System.out.println("Implementing runnable.....");
 
