@@ -6,6 +6,10 @@ public class CustomFunctionalInterface {
 		// using a static method reference
 		Counter counter = Utils::countElements;
 		System.out.println(counter.count(intArray));
+		// using instance method reference
+		Utils utilsInstance = new Utils();
+		Counter counter2 = utilsInstance::countElementsInstance;
+		System.out.println(counter2.count(intArray));
 	}
 }
 
