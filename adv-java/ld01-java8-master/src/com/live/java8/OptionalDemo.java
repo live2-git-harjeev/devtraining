@@ -18,6 +18,8 @@ public class OptionalDemo {
 			arrayList = new ArrayList();
 			arrayList.add("smile");
 		}
+
+		System.out.println(testString.length());
 	}
 }
 
