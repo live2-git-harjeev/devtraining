@@ -1,4 +1,4 @@
-package com.live.java8;
+package java8.newfeatures;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,9 +12,10 @@ public class MethodReference {
 		// :: the method reference operator
 		// stores elements in insertion order
 		// it allows duplicates
-		List<String> namesList = new ArrayList<String>();
+		List<String> namesList = new <String>ArrayList();
 		namesList.add("Tony");
 		namesList.add("Robbins");
+		// namesList.add(5);
 
 		// Iterate the java 8 way
 		// DIGGING INTO THE SOURCE CODE

@@ -1,4 +1,4 @@
-package com.live.java8;
+package java8.newfeatures;
 
 public class CustomFunctionalInterface {
 	public static void main(String[] args) {

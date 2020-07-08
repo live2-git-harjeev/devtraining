@@ -1,4 +1,4 @@
-package com.live.java7.oops.wrapper;
+package java7.fundamentals;
 
 import java.util.ArrayList;
 import java.util.List;

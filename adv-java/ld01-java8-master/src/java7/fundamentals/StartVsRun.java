@@ -1,4 +1,4 @@
-package com.live.java7.threading;
+package java7.fundamentals;
 
 public class StartVsRun {
 	public static void main(String[] args) {
