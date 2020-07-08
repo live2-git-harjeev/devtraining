@@ -1,12 +1,3 @@
-:beginner: **lab exercises**
-
-:lock: store the values 1, 5.5f,'a', true in the same array and print them.
-
-:lock:  store the values 1, 5.5f,'a', true in a hashmap and print them.
-
-
-:lock: analyze the program below and apply instance method reference for method (countElementsInstance).
-```java
 package com.live.java8;
 
 public class CustomFunctionalInterface {
@@ -37,4 +28,3 @@ class Utils {
 		return array.length;
 	}
 }
-```
