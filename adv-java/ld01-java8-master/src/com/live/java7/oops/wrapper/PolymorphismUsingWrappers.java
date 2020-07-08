@@ -21,6 +21,24 @@ public class PolymorphismUsingWrappers {
 
 	}
 
+	private static void downCastingAndUnboxing() {
+		int i = 100;
+
+		Number numbers[] = new Number[2];
+		// boxed and upcasted
+		// specific object is stored in a generic array
+		// PRIMITIVE INT IS BOXED TO INTEGER, THEN INTEGER IS UPCASTED TO NUMBER AND
+		// STORED.
+		numbers[0] = new Integer(i);
+
+		// DOWNCASTING (explicit downcasting)
+		Integer integer = (Integer) numbers[0];
+		// unboxed automatically
+		int i1 = integer;
+		// unboxing using the intValue() method.
+		int i2 = integer.intValue();
+	}
+
 	private static void primitiveTypes() {
 		int i = 100;
 		float f = 500.50f;
@@ -28,6 +46,8 @@ public class PolymorphismUsingWrappers {
 		Number numbers[] = new Number[2];
 		// boxed and upcasted
 		// specific object is stored in a generic array
+		// PRIMITIVE INT IS BOXED TO INTEGER, THEN INTEGER IS UPCASTED TO NUMBER AND
+		// STORED.
 		numbers[0] = new Integer(i);
 		numbers[1] = new Float(f);
 
