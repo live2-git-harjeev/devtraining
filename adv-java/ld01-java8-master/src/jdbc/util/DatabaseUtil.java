@@ -1,4 +1,4 @@
-package jdbc.crud.util;
+package jdbc.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

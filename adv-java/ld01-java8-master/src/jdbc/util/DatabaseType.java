@@ -1,4 +1,4 @@
-package jdbc.crud.util;
+package jdbc.util;
 
 public enum DatabaseType {
 ORACLEDB, MYSQLDB
