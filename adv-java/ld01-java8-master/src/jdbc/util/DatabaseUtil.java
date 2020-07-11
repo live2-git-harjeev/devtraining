@@ -68,4 +68,7 @@ public class DatabaseUtil {
 		System.out.println("Connected to MySQL!");
 		}
 	}
+	public static void processError(SQLException e) {
+		System.out.println("EXCEPTION :>> " + e.getMessage());
+	}
 }
