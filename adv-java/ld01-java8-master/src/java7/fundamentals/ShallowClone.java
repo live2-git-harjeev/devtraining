@@ -6,7 +6,7 @@ public static void main(String[] args) {
 }
 }
 
-class ObjectToBeCloned implements Cloneable {
+class ObjectToBeCloned {
 	// THE INT ARRAY IS SHALLOW CLONED AS ONLY THE ADDRESS IS COPIED AND THE VALUES
 	// ARE NOT COPIED
 	public int[] numbers;
@@ -15,8 +15,13 @@ class ObjectToBeCloned implements Cloneable {
 	public Float floatWrapper = 55.55f;
 	public Test test = new Test();
 
-	public static void cloneTest() {
-		
+	public ObjectToBeCloned(int size) {
+		numbers = new int[size];
+	}
+	
+	static void cloneTest() {
+		ObjectToBeCloned originalObject = new ObjectToBeCloned(2);
+		originalObject.numbers[0] = 100;
 	}
 }
 class Test {
