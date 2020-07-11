@@ -10,8 +10,8 @@ public class MapFilterReduce {
 	public static void main(String[] args) {
 		// oldStyleIteration();
 //		mapping_operation();
-//		filter_operation();
-		reduction_operation();
+		filter_operation();
+//		reduction_operation();
 	}
 
 	private static void reduction_operation() {
