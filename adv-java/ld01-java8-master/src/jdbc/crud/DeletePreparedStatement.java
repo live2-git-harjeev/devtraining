@@ -1,7 +1,6 @@
 package jdbc.crud;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -12,12 +11,12 @@ public class DeletePreparedStatement {
 	public static void main(String[] args) {
 		Connection connection = DatabaseUtil.getConnection(DatabaseType.ORACLEDB);
 		
-		int employeeId = 1011;
-		String employeeName = "Great";
-		Date hireDate = Date.valueOf("2020-3-21");
-		double salary = 55.5d;	
+//		int employeeId = 1011;
+//		String employeeName = "Great";
+//		Date hireDate = Date.valueOf("2020-3-21");
+//		double salary = 55.5d;	
 		
-		String queryString = "update employee1 set EMPLOYEE_NAME = ? where employee_id = ?";
+		String queryString = "delete from employee1  where employee_id = ?";
 		System.out.println(queryString);
 		PreparedStatement preparedStatement;
 		try {
@@ -25,11 +24,10 @@ public class DeletePreparedStatement {
 			
 			//ASSIGN VALUES FOR THE PARAMETERS
 
-			preparedStatement.setInt(2, 1015);
-			preparedStatement.setString(1, "Sunny");
+			preparedStatement.setInt(1, 1013);
 
-			int noOfRowsInserted = preparedStatement.executeUpdate();
-			System.out.println("Rows Updated :> " + 1);
+			int noOfRowsDeleted = preparedStatement.executeUpdate();
+			System.out.println("Rows Deleted :> " +noOfRowsDeleted );
 
 		} catch (SQLException e) {
 			System.out.println("EXCEPTION :>> " + e);
