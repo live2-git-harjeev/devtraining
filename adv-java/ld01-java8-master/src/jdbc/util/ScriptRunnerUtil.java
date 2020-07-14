@@ -10,7 +10,8 @@ import org.apache.ibatis.jdbc.ScriptRunner;
 
 public class ScriptRunnerUtil {
 public static void main(String[] args) throws FileNotFoundException {
-	Connection connection = DatabaseUtil.getConnection(DatabaseType.MYSQLDB);
+	//Connection connection = DatabaseUtil.getConnection(DatabaseType.MYSQLDB);
+	Connection connection = DatabaseUtil.getConnection(DatabaseType.ORACLEDB);
 	//Instantiating the script runner and associating it with the connection.
 	ScriptRunner scriptRunner = new ScriptRunner(connection);
 	//Read the script file
