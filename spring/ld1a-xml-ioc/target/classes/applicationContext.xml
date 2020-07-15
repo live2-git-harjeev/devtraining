@@ -2,11 +2,18 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- Beans are by default Singletons -->
 <!-- define the OracleRepository spring bean -->
 <!-- ProductRepository productRepository = new OracleRepository(); -->
 <!-- <bean id="productRepository"
 class="com.live.repository.OracleRepository"/> -->
 
-<bean id="productRepository"
+<!-- creating another productRepository Bean -->
+
+<bean id="mySqlRepository"
 class="com.live.repository.MySqlRepository"/>
+
+<!-- prototype : every request returns a new instance -->
+<!-- <bean id="productRepository" scope = "prototype"
+class="com.live.repository.OracleRepository"/> -->
 </beans>
