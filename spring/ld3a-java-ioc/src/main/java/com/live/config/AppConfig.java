@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 //may be processed by the Spring container to generate bean definitions
 @Configuration
 //Configures component scanning directives for use with @Configuration classes.
-@ComponentScan("com")
+@ComponentScan("com.live")
 public class AppConfig {
 
 }

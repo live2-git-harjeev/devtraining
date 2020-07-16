@@ -14,10 +14,10 @@ import com.live.model.Product;
 //explicit component name
 //@Component(value = "productRepository")
 //@Component("productRepository")
-@Component("oracleRepository")
+//@Component("oracleRepository")
 
 //implicit component name (oracleRepository)
-//@Component
+@Component
 public class OracleRepository implements ProductRepository {
 	@Override
 	public List<Product> getProducts() {
