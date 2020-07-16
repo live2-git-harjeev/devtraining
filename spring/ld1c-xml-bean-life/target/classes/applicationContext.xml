@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<!-- Beans are by default Singletons -->
+	<!-- define the OracleRepository spring bean -->
+	<!-- ProductRepository productRepository = new OracleRepository(); -->
+	
+<!-- init-method :	The name of the custom initialization method to invoke after setting bean properties.
+	 The method must have no arguments, but may throw any exception. 
+	 This is an alternative to implementing Spring's InitializingBean interface 
+	 or marking a method with the PostConstruct annotation. -->
+	 
+<!-- destroy-method	 The name of the custom destroy method to invoke on bean factory 
+ shutdown. 
+ The method must have no arguments, but may throw 
+ any exception. -->
+	<bean id="productRepository"
+		class="com.live.repository.OracleRepository" 
+		init-method="init" destroy-method="destroy"/>
+		
+	<bean id="productService"
+		class="com.live.service.ProductServiceImpl">
+		<constructor-arg index="0" ref="productRepository" />
+	</bean>
+</beans>
