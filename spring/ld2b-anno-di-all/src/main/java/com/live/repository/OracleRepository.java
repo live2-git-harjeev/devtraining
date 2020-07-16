@@ -14,13 +14,13 @@ import com.live.model.Product;
 //explicit component name
 //@Component(value = "productRepository")
 //@Component("productRepository")
-//@Component("oracleRepository")
 
 //implicit component name (oracleRepository)
-//Indicates that an annotated class is a "Repository", originally defined by Domain-Driven Design (Evans, 2003) 
-//as "a mechanism for encapsulating storage,retrieval, and search behavior which emulates a collection of objects". 
 @Repository
 public class OracleRepository implements ProductRepository {
+	 public OracleRepository() {
+		 System.out.println("public OracleRepository()");
+	}
 	@Override
 	public List<Product> getProducts() {
 		System.out.println("Oracle Repository");

@@ -6,6 +6,7 @@ import com.live.model.Product;
 import com.live.repository.OracleRepository;
 import com.live.repository.ProductRepository;
 
+//@Service
 public class ProductServiceImpl implements ProductService{
 
 	@Override
