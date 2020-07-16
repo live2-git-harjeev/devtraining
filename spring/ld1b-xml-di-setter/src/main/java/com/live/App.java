@@ -13,7 +13,7 @@ public class App
     	ProductService productService =  context.getBean("productService", ProductService.class);
     	productService.getProducts().forEach(System.out::println);
 //    	productService.mutateMethod();
-    	productService.getProducts().forEach(System.out::println);
+//    	productService.getProducts().forEach(System.out::println);
     	context.close();
     }
 }

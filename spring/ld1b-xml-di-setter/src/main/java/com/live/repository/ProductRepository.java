@@ -1,10 +1,9 @@
-package com.live.service;
+package com.live.repository;
 
 import java.util.List;
 
 import com.live.model.Product;
 
-public interface ProductService {
-//void	 mutateMethod();
+public interface ProductRepository {
 List<Product> getProducts();
 }
