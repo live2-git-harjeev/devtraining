@@ -15,6 +15,11 @@ public class App {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 		ProductRepository productRepository;
+try {
+	
+} catch (Exception e) {
+	System.out.println("EXCEPTION :>>> : " + e);
+}
 
 		// accessing bean with implicit bean name
 		// productRepository = (ProductRepository)context.getBean("oracleRepository");	
