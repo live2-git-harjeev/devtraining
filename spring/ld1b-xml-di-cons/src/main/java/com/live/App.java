@@ -10,7 +10,8 @@ public class App
     {
     	System.out.println("SPRING XML CONFIG WITH DI (CONSTRUCTOR BASED)");
     	ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-    	ProductService productService =  context.getBean("productService", ProductService.class);
+//    	ProductService productService =  context.getBean("productService", ProductService.class);
+    	ProductService productService = (ProductService) context.getBean("productService");
     	productService.getProducts().forEach(System.out::println);
 //    	productService.mutateMethod();
     	productService.getProducts().forEach(System.out::println);
