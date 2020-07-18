@@ -2,7 +2,7 @@ package com.live.service;
 
 import java.util.List;
 
-import com.live.model.Customer;
+import com.live.entity.Customer;
 
 public class CustomerServiceImpl implements CustomerService{
 
