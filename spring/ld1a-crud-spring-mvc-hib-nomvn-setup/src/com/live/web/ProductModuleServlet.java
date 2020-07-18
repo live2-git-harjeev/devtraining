@@ -14,7 +14,7 @@ public class ProductModuleServlet extends HttpServlet{
 @Override
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	PrintWriter printWriter = response.getWriter();
-	printWriter.println("<html><body><h1>Welecome to Sales Module Servlet");
+	printWriter.println("<html><body><h1>The ProductModuleServlet Servlet");
 	printWriter.close();
 }
 }

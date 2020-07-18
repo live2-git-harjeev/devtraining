@@ -14,7 +14,7 @@
 	</welcome-file-list>
 
 <!-- Servlet Configuration -->
-<!-- 	<servlet>
+<!-- <servlet>
 		<servlet-name>sales-module-servlet</servlet-name>
 		<servlet-class>com.live.web.SalesModuleServlet</servlet-class>
 	</servlet>
@@ -41,8 +41,9 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
-		<url-pattern>/ecommerce/*</url-pattern>
+		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
 	<absolute-ordering>
 		<name>spring_web</name>
 	</absolute-ordering>
