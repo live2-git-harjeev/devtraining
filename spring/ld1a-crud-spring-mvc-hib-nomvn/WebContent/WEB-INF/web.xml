@@ -13,7 +13,8 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
-	<servlet>
+<!-- Servlet Configuration -->
+<!-- 	<servlet>
 		<servlet-name>sales-module-servlet</servlet-name>
 		<servlet-class>com.live.web.SalesModuleServlet</servlet-class>
 	</servlet>
@@ -21,21 +22,28 @@
 		<servlet-name>sales-module-servlet</servlet-name>
 		<url-pattern>/sales/sales-servlet</url-pattern>
 	</servlet-mapping>
-
+		<servlet>
+		<servlet-name>product-module-servlet</servlet-name>
+		<servlet-class>com.live.web.ProductModuleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sales-module-servlet</servlet-name>
+		<url-pattern>/sales/sales-servlet</url-pattern>
+	</servlet-mapping> -->
 
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring-beans-servlet.xml</param-value>
+			<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
-		<url-pattern>/product</url-pattern>
+		<url-pattern>/ecommerce/*</url-pattern>
 	</servlet-mapping>
 	<absolute-ordering>
-	<name>spring_web</name>
+		<name>spring_web</name>
 	</absolute-ordering>
 </web-app>
