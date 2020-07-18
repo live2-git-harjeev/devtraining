@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>ld1a-crud-spring-mvc-hib-nomvn</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+
+<!-- Servlet Configuration -->
+<!-- <servlet>
+		<servlet-name>sales-module-servlet</servlet-name>
+		<servlet-class>com.live.web.SalesModuleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sales-module-servlet</servlet-name>
+		<url-pattern>/sales/sales-servlet</url-pattern>
+	</servlet-mapping>
+		<servlet>
+		<servlet-name>product-module-servlet</servlet-name>
+		<servlet-class>com.live.web.ProductModuleServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>sales-module-servlet</servlet-name>
+		<url-pattern>/sales/sales-servlet</url-pattern>
+	</servlet-mapping> -->
+
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>/WEB-INF/dispatcher-servlet.xml</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<absolute-ordering>
+		<name>spring_web</name>
+	</absolute-ordering>
+</web-app>
