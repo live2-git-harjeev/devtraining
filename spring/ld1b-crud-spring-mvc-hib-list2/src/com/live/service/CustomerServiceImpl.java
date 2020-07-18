@@ -12,7 +12,6 @@ import com.live.repository.CustomerRepository;
 
 @Service
 public class CustomerServiceImpl implements CustomerService{
-	
 @Autowired
 private CustomerRepository customerRepository;
 	@Override
