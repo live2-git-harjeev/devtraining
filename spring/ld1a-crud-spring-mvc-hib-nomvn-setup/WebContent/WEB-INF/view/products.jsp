@@ -9,4 +9,4 @@
 <body>
 List of Products
 </body>
-</html>
+</html>hide the cursor while typing
