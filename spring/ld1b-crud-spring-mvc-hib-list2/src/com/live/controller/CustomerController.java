@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.live.entity.Customer;
@@ -18,7 +20,7 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	@GetMapping(value = "/list")
-	public String getCusotmers(Model modelFromSpring) {
+	public String getCustomers(Model modelFromSpring) {
 		// The customersList is the model
 		// The customersList model will reach the view
 //		List<Customer> customersList = getCustomersStub();
@@ -28,6 +30,19 @@ public class CustomerController {
 		return "customers";
 	}
 
+	@GetMapping("/addCustomer")
+	public String addCustomer(Model customerModelFromController) {
+		Customer customer = new Customer();
+		customerModelFromController.addAttribute("customerModel", customer);
+		return "add-customer";
+	}
+	
+	@PostMapping("/saveCustomer")
+	public String saveCustomer(@ModelAttribute("customerModel") Customer customerModel) {
+		customerService.saveCustomer(customerModel);
+		return "redirect:/customer/list";
+	}
+	
 	private List<Customer> getCustomersStub() {
 		System.out.println("/customer/list");
 		List<Customer> customersList = new ArrayList<>();

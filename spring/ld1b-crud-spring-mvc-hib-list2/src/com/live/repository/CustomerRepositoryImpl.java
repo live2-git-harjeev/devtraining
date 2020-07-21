@@ -25,4 +25,12 @@ public class CustomerRepositoryImpl implements CustomerRepository{
 		List<Customer> customers = query.getResultList();
 		return customers;
 	}
+	
+	@Override
+	public void saveCustomer(Customer customer) {
+		//fetch Session from SessionFactory (JDBC Connection)
+		Session session = sessionFactory.getCurrentSession();
+		//save
+		session.save(customer);
+	}
 }

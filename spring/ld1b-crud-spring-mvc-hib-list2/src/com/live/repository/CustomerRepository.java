@@ -6,4 +6,6 @@ import com.live.entity.Customer;
 
 public interface CustomerRepository {
 	List<Customer> getCustomers();
+
+	void saveCustomer(Customer customer);
 }

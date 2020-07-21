@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="ld1b-crud-spring-mvc-hib-list2" path="/ld1a-crud-spring-mvc-hib-nomvn-setup" reloadable="true" source="org.eclipse.jst.jee.server:ld1b-crud-spring-mvc-hib-list2"/></Host>
+      <Context docBase="ld1b-crud-spring-mvc-hib-list2" path="/ld1b-crud-spring-mvc-hib-list2" reloadable="true" source="org.eclipse.jst.jee.server:ld1b-crud-spring-mvc-hib-list2"/><Context docBase="ld1b-crud-spring-mvc-hib-list" path="/ld1a-crud-spring-mvc-hib-nomvn-setup" reloadable="true" source="org.eclipse.jst.jee.server:ld1b-crud-spring-mvc-hib-list"/><Context docBase="ld1a-crud-spring-mvc-hib-nomvn-setup" path="/ld1a-crud-spring-mvc-hib-nomvn-setup" reloadable="true" source="org.eclipse.jst.jee.server:ld1a-crud-spring-mvc-hib-nomvn-setup"/></Host>
     </Engine>
   </Service>
 </Server>
