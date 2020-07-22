@@ -40,7 +40,7 @@ public class CustomerController {
 	@PostMapping("/saveCustomer")
 	public String saveCustomer(@ModelAttribute("customerModel") Customer customerModel) {
 		customerService.saveCustomer(customerModel);
-		return "redirect:/customer/list";
+		return "redirect:/ecommerce/customer/list";
 	}
 	
 	private List<Customer> getCustomersStub() {
