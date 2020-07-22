@@ -14,8 +14,10 @@ import com.live.service.CustomerService;
 @RequestMapping(value = "/customerrest")
 public class CustomerRestController {
 	@Autowired
+
 	private CustomerService customerService;
 	@GetMapping(value = "/list")
+	
 	public List<Customer> getCustomers() {
 		List<Customer> customersList = customerService.getCustomers();
 		return customersList;
