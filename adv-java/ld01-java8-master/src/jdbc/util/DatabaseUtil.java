@@ -58,7 +58,6 @@ public class DatabaseUtil {
 		if(connection != null) {
 			System.out.println("Connected to Oracle!");		
 		}
-
 	}
 
 	static public void testMySQLConnection() {
