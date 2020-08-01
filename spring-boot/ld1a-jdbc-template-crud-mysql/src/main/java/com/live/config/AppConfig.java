@@ -23,8 +23,8 @@ public class AppConfig {
 		DriverManagerDataSource datasource = new DriverManagerDataSource();
 		datasource.setDriverClassName(environment.getProperty("driver"));
 		datasource.setUrl(environment.getProperty("url"));
-		datasource.setUrl(environment.getProperty("username"));
-		datasource.setUrl(environment.getProperty("password"));
+		datasource.setUsername(environment.getProperty("username"));
+		datasource.setPassword(environment.getProperty("password"));
 		return datasource;
 	}
 }
