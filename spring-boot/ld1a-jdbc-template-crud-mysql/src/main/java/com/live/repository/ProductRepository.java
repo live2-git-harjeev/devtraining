@@ -9,5 +9,5 @@ public boolean createProduct();
 public boolean updateProduct();
 public boolean deleteProduct();
 public List<Product> getProducts();
-public Product getProductById();
+Product getProductById(int productId);
 }

@@ -17,5 +17,7 @@ public class App
         ProductRepository productRepository = applicationContext.getBean(ProductRepository.class);
         List<Product> products = productRepository.getProducts();
         products.forEach(System.out::println);
+        
+        //implement all the other operations.
     }
 }

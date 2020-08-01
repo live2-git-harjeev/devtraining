@@ -32,22 +32,26 @@ public List<Product> getProducts() {
 }
 
 @Override
-public Product getProductById() {
+public Product getProductById(int productId) {
+	//jdbcTemplate.queryForObject(.....)
 	return null;
 }
 
 	@Override
 	public boolean createProduct() {
+		//jdbcTemplate.upate(......)
 		return false;
 	}
 
 	@Override
 	public boolean updateProduct() {
+		//jdbcTemplate.update(..........)
 		return false;
 	}
 
 	@Override
 	public boolean deleteProduct() {
+		//jdbcTemplate.delete(...............)
 		return false;
 	}
 
