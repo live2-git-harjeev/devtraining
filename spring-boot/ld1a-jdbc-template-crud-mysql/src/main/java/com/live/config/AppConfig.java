@@ -18,7 +18,8 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 //Provides support parallel with Spring XML's <context:component-scan> element.
 @ComponentScan("com.live")
 //Annotation providing a convenient and declarative mechanism for adding a PropertySource to Spring's Environment. To be used inconjunction with @Configuration classes.
-@PropertySource("classpath:database-mysql.properties")
+//@PropertySource("classpath:database-mysql.properties")
+@PropertySource("application.properties")
 public class AppConfig {
 
 	private final String DB_DRIVER = "db_driver";	

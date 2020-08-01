@@ -5,9 +5,13 @@ import java.util.List;
 import com.live.model.Product;
 
 public interface ProductRepository {
-public boolean createProduct();
-public boolean updateProduct();
-public boolean deleteProduct();
-public List<Product> getProducts();
-Product getProductById(int productId);
+	public List<Product> getProducts();
+
+	Product getProductById(int productId);
+
+	boolean createProduct(Product product);
+
+	boolean updateProduct(Product product);
+
+	boolean deleteProduct(int productId);
 }

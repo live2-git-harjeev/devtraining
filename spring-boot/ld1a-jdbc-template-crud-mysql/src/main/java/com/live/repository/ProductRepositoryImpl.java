@@ -16,10 +16,10 @@ public class ProductRepositoryImpl implements ProductRepository {
 JdbcTemplate jdbcTemplate;
 
 private final String SELECT_PRODUCTS = "SELECT * FROM PRODUCTS";
-private final String SELECT_PRODUCT_BY_ID = "SELECT * FROM PRODUCTS WHERE PRDOCUT_ID = ?";
-private final String CREATE_PRODUCT = "INSERT INTO PRODUCT VALUES (PRODUCT_ID, PRODUCT_NAME, PRICE) VALUES (?,?,?)";
-private final String UPDATE_PRODUCT = "UPDATE PRODUCT SET  PRODUCT_NAME=? , PRICE = ? WHERE PRODUCT_ID = ?";
-private final String DELETE_PRODUCT = "DELETE FROM PRODUCT WHERE PRODUCT_ID = ?";
+private final String SELECT_PRODUCT_BY_ID = "SELECT * FROM PRODUCTS WHERE product_id = ?";
+private final String CREATE_PRODUCT = "INSERT INTO PRODUCTs (PRODUCT_ID, PRODUCT_NAME, PRICE) VALUES (?,?,?)";
+private final String UPDATE_PRODUCT = "UPDATE PRODUCTs SET  PRODUCT_NAME=? , PRICE = ? WHERE PRODUCT_ID = ?";
+private final String DELETE_PRODUCT = "DELETE FROM PRODUCTs WHERE PRODUCT_ID = ?";
 @Autowired
 ProductRepositoryImpl(DataSource dataSource){
 	jdbcTemplate = new JdbcTemplate(dataSource);
@@ -33,26 +33,27 @@ public List<Product> getProducts() {
 
 @Override
 public Product getProductById(int productId) {
-	//jdbcTemplate.queryForObject(.....)
-	return null;
+	ProductMapper productMapper = new ProductMapper();
+	Product product = jdbcTemplate.queryForObject(SELECT_PRODUCT_BY_ID,new Object[]{productId}, productMapper );
+	return product;
 }
 
 	@Override
-	public boolean createProduct() {
-		//jdbcTemplate.upate(......)
-		return false;
+	public boolean createProduct(Product product) {
+		int noOfRowsInserted = jdbcTemplate.update(CREATE_PRODUCT,product.getProductId(),product.getProductName(),product.getPrice());
+		return (noOfRowsInserted > 0);
 	}
 
 	@Override
-	public boolean updateProduct() {
-		//jdbcTemplate.update(..........)
-		return false;
+	public boolean updateProduct(Product product) {
+		int noOfRowsUpdated = jdbcTemplate.update(UPDATE_PRODUCT,product.getProductName(),product.getPrice(),product.getProductId());
+		return (noOfRowsUpdated > 0);
 	}
 
 	@Override
-	public boolean deleteProduct() {
-		//jdbcTemplate.delete(...............)
-		return false;
+	public boolean deleteProduct(int productId) {
+		jdbcTemplate.update(DELETE_PRODUCT, productId);
+		return true;
 	}
 
 }
