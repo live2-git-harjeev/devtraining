@@ -6,11 +6,11 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import com.live.model.Product;
 import com.live.model.ProductMapper;
-@Component
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
 	
 JdbcTemplate jdbcTemplate;

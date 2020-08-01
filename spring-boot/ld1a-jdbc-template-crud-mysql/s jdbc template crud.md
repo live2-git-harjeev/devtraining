@@ -6,5 +6,7 @@
 :four: Use Jdbc Template   
 :five: Configure JDBCTemplate to use the Datasource  
 :six: use jdbcTemplate for fetching all the Products 
+:seven: implement the RowMapper
+:eight: get all products from the app  
 
   
