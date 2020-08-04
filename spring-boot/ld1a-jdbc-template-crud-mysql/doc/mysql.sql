@@ -1,5 +1,12 @@
+USE livedb2;
 CREATE TABLE `livedb2`.`products` (
   `product_id` INT NOT NULL,
   `product_name` VARCHAR(45) NOT NULL,
   `price` INT NULL,
   PRIMARY KEY (`product_id`));
+  
+INSERT INTO PRODUCTS VALUES (100,'SPRING',50.50);
+INSERT INTO PRODUCTS VALUES (101,'HIBERNATE',51.50);
+COMMIT;
+
+SELECT * FROM PRODUCTS;
