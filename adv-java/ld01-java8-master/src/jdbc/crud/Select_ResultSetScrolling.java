@@ -29,7 +29,8 @@ public class Select_ResultSetScrolling {
 			while (resultSet.next()) {
 				int employeeId = resultSet.getInt("EMPLOYEE_ID");
 				String firstName = resultSet.getString("FIRST_NAME");
-				
+				//changing the firstName to uppercase.
+				//select upper(firstName) from table;
 				System.out.println(employeeId + "   " + firstName);
 //				Thread.currentThread().sleep(500*60);
 			}
