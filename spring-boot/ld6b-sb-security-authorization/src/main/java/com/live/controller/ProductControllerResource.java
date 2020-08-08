@@ -13,7 +13,7 @@ public String indexPage() {
 	html +=  "</html>";
 	return html;
 }
-@GetMapping("/user")
+@GetMapping("/userPage")
 public String userPage() {
 	String html = "<html>";
 	html += html + "<head><title>Welcome Page</title></head>";
@@ -21,7 +21,7 @@ public String userPage() {
 	html +=  "</html>";
 	return html;
 }
-@GetMapping("/admin")
+@GetMapping("/adminPage")
 public String adminPage() {
 	String html = "<html>";
 	html += html + "<head><title>Welcome Page</title></head>";

@@ -18,6 +18,8 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	//user_name
+//	@Column(name="user_name")
 	private String userName;
 	private String password;
 	private String roles;
